@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Hello World | myblog</title>
+  <title>gulp使用及常用操作 | myblog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -196,34 +196,99 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2017-01-06T08:29:07.116Z" itemprop="datePublished">
-          2017-01-06
+      <time datetime="2017-01-07T08:11:43.741Z" itemprop="datePublished">
+          2017-01-07
       </time>
     
 </span>
-                <h1>Hello World</h1>
+                <h1>gulp使用及常用操作</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+      		<h1 id="gulp-命令操作"><a href="#gulp-命令操作" class="headerlink" title="gulp 命令操作"></a>gulp 命令操作</h1><h2 id="一、序言"><a href="#一、序言" class="headerlink" title="一、序言"></a>一、序言</h2><p> gulp是前端开发过程中一种基于流的代码构建工具，是自动化项目的构建利器；<br>它不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；<br>使用它，不仅可以很愉快的编写代码，而且大大提高我们的工作效率。</p>
+<h2 id="二、什么是自动化构建工具"><a href="#二、什么是自动化构建工具" class="headerlink" title="二、什么是自动化构建工具"></a>二、什么是自动化构建工具</h2><ul>
+<li>自动完成一系列重复的操作<ul>
+<li>Less，scss - css</li>
+<li>Coffeescript/typescript - javascript</li>
+<li>css 压缩</li>
+<li>Js 混淆</li>
+<li>Html 压缩</li>
+<li>Img 尺寸优化</li>
+</ul>
+</li>
+<li>文档地址<br>  <a href="http://gulpjs.com/" target="_blank" rel="external">官网</a><br>  <a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">中文网</a></li>
+<li>Gulp到底是什么<br>gulp是基于Nodejs的自动任务运行器<br>它能自动化地完成 javascript、coffee、sass、less、html/image、css 等文件的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤。<br>在实现上，它借鉴了Unix操作系统的管道（pipe）思想，前一级的输出，直接变成后一级的输入，使得在操作上非常简单。<br><strong>总结：</strong><ul>
+<li>Gulp既包含了工具，也包含了也包含一些编程的API<ul>
+<li>就是用来机械化的完成重复性质的工作</li>
+<li>gulp的机制就是将重复工作抽象成一个个的任务。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、gulp特性"><a href="#三、gulp特性" class="headerlink" title="三、gulp特性"></a>三、gulp特性</h2><ul>
+<li>易于使用<br>通过代码优于配置的策略，gulp 让简单的任务简单，复杂的任务可管理。</li>
+<li>构建快速<br>利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。</li>
+<li>易于学习<br>通过最少的 API，掌握 gulp 毫不费力，构建工作尽在掌握：如同一系列流管道</li>
+<li>插件高质<br>gulp 严格的插件指南确保插件如你期望的那样简洁高质得工作。</li>
+</ul>
+<h2 id="四、安装gulp"><a href="#四、安装gulp" class="headerlink" title="四、安装gulp"></a>四、安装gulp</h2><p><code>npm install gulp (--save-dev 或 -g)</code></p>
+<h2 id="五、Gulp基本使用"><a href="#五、Gulp基本使用" class="headerlink" title="五、Gulp基本使用"></a>五、Gulp基本使用</h2><p>先在项目中建立一个<code>gulpfile.js</code>文件</p>
+<ul>
+<li>定义一个任务</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>gulp = require('gulp')</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	gulp.task(&apos;default&apos;,function()&#123;</div><div class="line">	console.log(&apos;hello gulp&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>注意: 在cmd中执行gulp(gulp 会默认的执行default任务)</strong></p>
+<ul>
+<li><p>复制单个文件</p>
+<figure class="highlight plain"><figcaption><span>gulp = require("gulp");</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">gulp.task(&quot;copy&quot;, function() &#123;</div><div class="line">			console.log(&quot;开始拷贝&quot;);</div><div class="line">			gulp.src(&quot;index.html&quot;)</div><div class="line">.pipe(gulp.dest(&quot;dist/&quot;));</div></pre></td></tr></table></figure>
+</li>
+<li><p>复制多个文件</p>
+<ul>
+<li><a href="https://github.com/isaacs/node-glob" target="_blank" rel="external">匹配语法</a><ul>
+<li>src/*</li>
+<li>src/*/*<ul>
+<li>src/**/*</li>
+<li>src/*.jpg</li>
+<li>src/*.{jpg,png}</li>
+</ul>
+</li>
+<li>多个globs</li>
+<li>[‘src/*.{jpg,png}’,’a/a.html’]</li>
+</ul>
+</li>
+<li>排除某些文件<ul>
+<li>!xxxxx<figure class="highlight plain"><figcaption><span>function() &#123;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	gulp.src([&apos;css/*.css&apos;, &quot;!css/_common.css&quot;])</div><div class="line">		.pipe(gulp.dest(&quot;dist/css/&quot;));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文件监视自动执行任务</p>
+</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>function() &#123;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">   gulp.watch([&apos;css/*.css&apos;],[&apos;copymul&apos;]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="六、gulp工具常用的插件"><a href="#六、gulp工具常用的插件" class="headerlink" title="六、gulp工具常用的插件"></a>六、gulp工具常用的插件</h2><ul>
+<li><a href="https://www.npmjs.com/package/gulp-less" target="_blank" rel="external">编译 Less：gulp-less</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-connect" target="_blank" rel="external">创建本地服务器：gulp-connect</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-concat" target="_blank" rel="external">合并文件：gulp-concat</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-uglify" target="_blank" rel="external">最小化 js 文件：gulp-uglify</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-rename" target="_blank" rel="external">重命名文件：gulp-rename</a></li>
+<li>Browser-sync插件</li>
+</ul>
+<h2 id="七、完整的使用gulp创建完整项目工作流"><a href="#七、完整的使用gulp创建完整项目工作流" class="headerlink" title="七、完整的使用gulp创建完整项目工作流"></a>七、完整的使用gulp创建完整项目工作流</h2><blockquote>
+<p>var gulp = require(“gulp”);<br>//html插件<br>var htmlmin = require(“gulp-htmlmin”);<br>//css插件<br>var sass = require(“gulp-sass”);<br>var cssconcat = require(“gulp-concat-css”);<br>var cssnano = require(“gulp-cssnano”);<br>//js插件<br>var concat = require(“gulp-concat”);<br>var uglify = require(‘gulp-uglify’);<br>var jshint = require(‘gulp-jshint’);//命令：npm install jshint gulp-jshint –save-dev<br>//开启静态服务器<br>var browserSync = require(‘browser-sync’).create();<br>//browserSync上自带的实时刷新功能<br>var reload = browserSync.reload;<br>//1.处理HTML  压缩<br>gulp.task(“html”, function(){<br>    gulp.src(“<em>.html”)<br>        .pipe(htmlmin({<br>            collapseWhitespace: true, //压缩HTML中的空白字符<br>            collapseBooleanAttributes: true, // 省略布尔属性的值<code>&lt;input checked=&quot;true&quot;/&gt; ==&gt; &lt;input checked/&gt;</code><br>            removeAttributeQuotes: true, //删除所有属性值的引号<br>            removeComments: true, //删除注释<br>            removeEmptyAttributes: true, // 删除所有空格作属性值 <code>&lt;input id=&quot;&quot; /&gt; ==&gt; &lt;input /&gt;</code><br>            removeScriptTypeAttributes: true, //删除<code>&lt;script&gt;</code>的<code>type=&quot;text/javascript&quot;</code><br>            removeStyleLinkTypeAttributes: true, //删除<code>&lt;style&gt;</code>和<code>&lt;link&gt;</code>的<code>type=&quot;text/css&quot;</code><br>        }))<br>        .pipe(gulp.dest(“dist/“))<br>        .pipe(reload({stream: true}))<br>});<br>//2.处理css文件  转换、合并、压缩<br>gulp.task(“css”, function(){<br>    gulp.src(“css/</em>.scss”)<br>        .pipe(sass())<br>        .pipe(cssconcat(“index.css”))<br>        .pipe(cssnano())<br>        .pipe(gulp.dest(“dist/css”))<br>        .pipe(reload({stream: true}))<br>});<br>//3.处理js文件  合并，压缩，混淆<br>gulp.task(“js”, function(){<br>    gulp.src(“js/<em>.js”)<br>        .pipe(concat(“index.js”))<br>        .pipe(uglify())<br>        .pipe(jshint())<br>        .pipe(gulp.dest(“dist/js”))<br>        .pipe(reload({stream: true}))<br>});<br>//4.处理图片  直接复制移动或者压缩成精灵图<br>gulp.task(“img”, function(){<br>    gulp.src(“img/</em>.<em>“)<br>        .pipe(gulp.dest(“dist/img”))<br>        .pipe(reload({stream: true}))<br>});<br>//5.处理fonts  直接复制移动或者压缩合并为一个文件<br>gulp.task(“fonts”, function(){<br>    gulp.src(“fonts/</em>.<em>“)<br>        .pipe(gulp.dest(“dist/fonts”))<br>        .pipe(reload({stream: true}))<br>});<br>//6.处理lib<br>gulp.task(“lib”, function(){<br>    gulp.src(“lib/**/</em>.<em>“)<br>        .pipe(gulp.dest(“dist/lib”))<br>        .pipe(reload({stream: true}))<br>});<br>//7.编译任务<br>gulp.task(“build”, [“html”, “css”, “js”, “img”, “fonts”, “lib”]);<br>//8.开启静态服务器<br>gulp.task(“serve”, [“build”], function(){<br>    browserSync.init({<br>        server: {<br>            baseDir: “dist/“<br>        }<br>    });<br>    //监听前面所有的任务是否改变，进行实时刷新<br>    gulp.watch(“</em>.html”, [“html”]);<br>    gulp.watch(“css/<em>.css”, [“style”]);<br>    gulp.watch(“js/</em>.js”, [“js”]);<br>    gulp.watch(“img/<em>.</em>“, [“img”]);<br>    gulp.watch(“fonts/<em>.</em>“, [“fonts”]);<br>    gulp.watch(“lib/<em>*/</em>.*”, [“lib”]);<br>});</p>
+</blockquote>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/01/06/blog/" style="float: left;">
-        ← 我的第一篇BLOG
-    </a>
     
+    <a class="pull-right" href="/2017/01/06/blog/">
+        我的第一篇BLOG →
+    </a>
     
 </nav>
 
