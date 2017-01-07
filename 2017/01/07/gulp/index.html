@@ -237,35 +237,40 @@
 <ul>
 <li>定义一个任务</li>
 </ul>
-<figure class="highlight plain"><figcaption><span>gulp = require('gulp')</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	gulp.task(&apos;default&apos;,function()&#123;</div><div class="line">	console.log(&apos;hello gulp&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>gulp = require('gulp')</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	gulp.task(&apos;default&apos;,function()&#123;</div><div class="line">		console.log(&apos;hello gulp&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p><strong>注意: 在cmd中执行gulp(gulp 会默认的执行default任务)</strong></p>
 <ul>
-<li><p>复制单个文件</p>
-<figure class="highlight plain"><figcaption><span>gulp = require("gulp");</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">gulp.task(&quot;copy&quot;, function() &#123;</div><div class="line">			console.log(&quot;开始拷贝&quot;);</div><div class="line">			gulp.src(&quot;index.html&quot;)</div><div class="line">.pipe(gulp.dest(&quot;dist/&quot;));</div></pre></td></tr></table></figure>
-</li>
-<li><p>复制多个文件</p>
+<li>复制单个文件</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>gulp = require("gulp");</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">gulp.task(&quot;copy&quot;, function() &#123;</div><div class="line">	console.log(&quot;开始拷贝&quot;);</div><div class="line">	gulp.src(&quot;index.html&quot;)</div><div class="line">	.pipe(gulp.dest(&quot;dist/&quot;));</div></pre></td></tr></table></figure>
 <ul>
+<li>复制多个文件<ul>
 <li><a href="https://github.com/isaacs/node-glob" target="_blank" rel="external">匹配语法</a><ul>
 <li>src/*</li>
-<li>src/*/*<ul>
-<li>src/**/*</li>
-<li>src/*.jpg</li>
-<li>src/*.{jpg,png}</li>
+<li>src/*/*</li>
 </ul>
 </li>
+</ul>
+<ul>
+<li>src/**/*</li>
+<li>src/*.jpg</li>
+<li>src/*.{jpg,png}<ul>
 <li>多个globs</li>
 <li>[‘src/*.{jpg,png}’,’a/a.html’]</li>
 </ul>
 </li>
+</ul>
+<ul>
 <li>排除某些文件<ul>
-<li>!xxxxx<figure class="highlight plain"><figcaption><span>function() &#123;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	gulp.src([&apos;css/*.css&apos;, &quot;!css/_common.css&quot;])</div><div class="line">		.pipe(gulp.dest(&quot;dist/css/&quot;));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-</li>
+<li>!xxxxx</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>文件监视自动执行任务</p>
-</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>function() &#123;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	gulp.src([&apos;css/*.css&apos;, &quot;!css/_common.css&quot;])</div><div class="line">		.pipe(gulp.dest(&quot;dist/css/&quot;));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>文件监视自动执行任务</li>
 </ul>
 <figure class="highlight plain"><figcaption><span>function() &#123;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">   gulp.watch([&apos;css/*.css&apos;],[&apos;copymul&apos;]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h2 id="六、gulp工具常用的插件"><a href="#六、gulp工具常用的插件" class="headerlink" title="六、gulp工具常用的插件"></a>六、gulp工具常用的插件</h2><ul>
