@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>demo | myblog</title>
+  <title>我的第一篇blog | myblog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -201,12 +201,54 @@
       </time>
     
 </span>
-                <h1>demo</h1>
+                <h1>我的第一篇blog</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>#习大大</p>
-<h2 id="说"><a href="#说" class="headerlink" title="说"></a>说</h2><p>1.尽快哈市肯德基哈克斯交换机<br>2.阿斯达所大所多阿萨德</p>
+      		<p>#搭建一个BLOG</p>
+<h2 id="一、需要用到的应用程序"><a href="#一、需要用到的应用程序" class="headerlink" title="一、需要用到的应用程序"></a>一、需要用到的应用程序</h2><p>@(blog)</p>
+<ul>
+<li>node.js <a href="https://nodejs.org/en/" target="_blank" rel="external">下载地址</a> 我下载的版本为v4.4.3</li>
+<li>GIT<a href="https://git-scm.com/" target="_blank" rel="external">下载地址</a>如果你已经安装xcode，那已经默认集成git了，不需要再继续安装</li>
+<li><p>hexo 如果你已经安装好上面两个应用程序，那么现在可以通过<code>npm</code>来安装hexo，这个过程会需要一些时间，请耐心等待<br>  <strong>注意：有些教程没有加下面的sudo，操作是执行不成功的，因为需要管理员权限，因此这里需要在下面的命令中加入sudo</strong></p>
+  <figure class="highlight plain"><figcaption><span>sudo npm install -g hexo-cli```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">* 执行完上面的三个操作，那么现在你的电脑已经安装了node.js,git和hexo了</div><div class="line">## 二、在GitHub上面建立GitHub Pages</div><div class="line">&gt;在不购买服务器的前提下，我们的网站需要挂在GitHub Pages上，其实也可以托管在coding上，但是这个就自己去试验，我们这里以GitHub Pages为例。</div><div class="line">* 首先建立一个[GitHub](https://github.com/)账号，如下图所示</div><div class="line">![Alt text](./1483750658187.png)</div><div class="line">* 然后去注册好的邮箱里面验证一下</div><div class="line">* 验证完成后，需要添加一个仓库Repositories</div><div class="line">![Alt text](./1483750714445.png)</div><div class="line">* 具体的配置信息参考下图</div><div class="line">![Alt text](./1483750750016.png)</div><div class="line">*现在我们在地址栏输入：http://bloggithub.github.io</div><div class="line">会看到下面这样一个界面</div><div class="line">![Alt text](./1483750786394.png)</div><div class="line">* 现在我们已经搭建好个人博客的基础了，下面我们要做的就是真正将窝建立起来。</div><div class="line">* 参考http://www.h5cn.com/html5/jishu/201621813.html</div><div class="line">* 相关具体操作</div><div class="line">	* git分支</div><div class="line">	 * Git branch: 查看分支</div><div class="line">	 * Git branch “分支名称”</div><div class="line">	 * Git checkout v2: 切换分支</div><div class="line">	 * Git push -u origin v2</div><div class="line">	* 托管页面</div><div class="line"> 		http://pages.github.com/（使用教程）</div><div class="line">分支名必须是gh-pages 	</div><div class="line">## 三、使用Hexo来显示博客</div><div class="line">* 使用hexo工具</div><div class="line">	* 使用npm安装hexo</div><div class="line">		* ``npm install -g hexo``</div><div class="line">	* 初始化hexo</div><div class="line">		* ``Hexo init blog``</div><div class="line">	* 生成静态页面</div><div class="line">		* ``hexo generate``</div><div class="line">	* 启动本地服务，进行文章预览调试</div><div class="line">		* ``hexo server``</div><div class="line">	* 修改`_config.yml`文件</div><div class="line">		* ```deploy:</div><div class="line">  					type: git</div><div class="line">  					repository:**********</div><div class="line">  					branch: gh-pages</div></pre></td></tr></table></figure>
+<ul>
+<li>下载安装<code>hexo-deployer-git</code><ul>
+<li><code>npm install hexo-deployer-git --save</code><ul>
+<li>发布到<code>github</code></li>
+<li><code>hexo deploy --generate</code><blockquote>
+<blockquote>
+<p>注意: 打开网站会出现乱掉的情况，由于需要配置相应的路径</p>
+</blockquote>
+</blockquote>
+</li>
+<li>修改_config.yml文件</li>
+<li>root: /blog/</li>
+<li>重新发布（<strong>使用主题后</strong>）</li>
+<li>hexo clean</li>
+<li>hexo deploy –generate<h2 id="四、使用其他主题"><a href="#四、使用其他主题" class="headerlink" title="四、使用其他主题"></a>四、使用其他主题</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>配置主题<br>  Hexo主题非常多，可以参考<a href="https://hexo.io/themes/" target="_blank" rel="external">hexo主题</a></li>
+<li><p>在这里我们使用的主题为Next，大家可以看一下效果<a href="http://aiwalle.com/" target="_blank" rel="external">http://aiwalle.com/</a> ，从我的个人博客上可以看到，这个主题还是比较酷炫的。</p>
+<ul>
+<li>首先放上Next主题的<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">官方地址</a></li>
+<li><p>在终端窗口下，定位到 Hexo 站点目录下。使用<code>Git clone</code> 代码，<code>your-hexo-site</code>在这里就是<code>bloggithub.github.io</code>这个文件夹</p>
+<pre><code>&gt; ![Alt text](./1483752044597.png) 
+</code></pre><p>  clone的过程也许会需要一点时间，请耐心等待。在我们clone完成后，会在theme文件夹里看到一个next文件夹。这时，进入站点配置文件_config.yml，找到 theme 字段，并将其值更改为 next</p>
+<pre><code>&gt; ![Alt text](./1483752133840.png)
+</code></pre></li>
+<li><p>配置好以后，我们重新生成hexo s本地预览看一下效果吧，是不是一个酷炫的页面就出来啦，如果要部署的话记得上面的命令顺序哦—<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">next官网</a>。  <img src="./1483752711810.png" alt="Alt text"></p>
+<h2 id="五、使用个人域名"><a href="#五、使用个人域名" class="headerlink" title="五、使用个人域名"></a>五、使用个人域名</h2><p><strong>预知详情，等待下回分解</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://www.jianshu.com/p/a4b74cc9ff28" target="_blank" rel="external">详情查询</a>……</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
