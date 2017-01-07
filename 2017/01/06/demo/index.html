@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>我的第er篇blog | myblog</title>
+  <title>我的第一篇BLOG | myblog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -201,7 +201,7 @@
       </time>
     
 </span>
-                <h1>我的第er篇blog</h1>
+                <h1>我的第一篇BLOG</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
@@ -217,10 +217,10 @@
 <p>在不购买服务器的前提下，我们的网站需要挂在GitHub Pages上，其实也可以托管在coding上，但是这个就自己去试验，我们这里以GitHub Pages为例。</p>
 </blockquote>
 </li>
-<li>首先建立一个<a href="https://github.com/" target="_blank" rel="external">GitHub</a>账号，如下图所示<br><img src="./1483750658187.png" alt="Alt text"></li>
+<li>首先建立一个<a href="https://github.com/" target="_blank" rel="external">GitHub</a>账号，如下图所示<br><img src="./1.PNG" alt="Alt text"></li>
 <li>然后去注册好的邮箱里面验证一下</li>
-<li>验证完成后，需要添加一个仓库Repositories<br><img src="./1483750714445.png" alt="Alt text"></li>
-<li>具体的配置信息参考下图<br><img src="./1483750750016.png" alt="Alt text"><br>*现在我们在地址栏输入：<a href="http://bloggithub.github.io" target="_blank" rel="external">http://bloggithub.github.io</a><br>会看到下面这样一个界面<br><img src="./1483750786394.png" alt="Alt text"></li>
+<li>验证完成后，需要添加一个仓库Repositories<br><img src="./2.PNG" alt="Alt text"></li>
+<li>具体的配置信息参考下图<br><img src="./3.PNG" alt="Alt text"><br>*现在我们在地址栏输入：<a href="http://bloggithub.github.io" target="_blank" rel="external">http://bloggithub.github.io</a><br>会看到下面这样一个界面<br><img src="./4.PNG" alt="Alt text"></li>
 <li>现在我们已经搭建好个人博客的基础了，下面我们要做的就是真正将窝建立起来。</li>
 <li>参考<a href="http://www.h5cn.com/html5/jishu/201621813.html" target="_blank" rel="external">http://www.h5cn.com/html5/jishu/201621813.html</a></li>
 <li>相关具体操作<ul>
@@ -248,11 +248,14 @@
 <li><code>hexo generate</code></li>
 </ul>
 </li>
-<li>启动本地服务，进行文章预览调试<ul>
+<li><p>启动本地服务，进行文章预览调试</p>
+<ul>
 <li><code>hexo server</code></li>
+<li>打开<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br><img src="./5.PNG" alt="Alt text"></li>
 </ul>
 </li>
-<li>修改<code>_config.yml</code>文件<ul>
+<li><p>修改<code>_config.yml</code>文件</p>
+<ul>
 <li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">type: git</div><div class="line">repository:**********</div><div class="line">branch: gh-pages</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -284,16 +287,15 @@
 <ul>
 <li>首先放上Next主题的<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">官方地址</a></li>
 <li><p>在终端窗口下，定位到 Hexo 站点目录下。使用<code>Git clone</code> 代码，<code>your-hexo-site</code>在这里就是<code>bloggithub.github.io</code>这个文件夹</p>
-<pre><code>&gt; ![Alt text](./1483752044597.png) 
+<pre><code>&gt; ![Alt text](./6.PNG)
 </code></pre><p>  clone的过程也许会需要一点时间，请耐心等待。在我们clone完成后，会在theme文件夹里看到一个next文件夹。这时，进入站点配置文件_config.yml，找到 theme 字段，并将其值更改为 next</p>
-<pre><code>&gt; ![Alt text](./1483752133840.png)
+<pre><code>&gt;![Alt text](./7.PNG)
 </code></pre></li>
-<li><p>配置好以后，我们重新生成hexo s本地预览看一下效果吧，是不是一个酷炫的页面就出来啦，如果要部署的话记得上面的命令顺序哦—<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">next官网</a>。  <img src="./1483752711810.png" alt="Alt text"></p>
-<h2 id="五、使用个人域名"><a href="#五、使用个人域名" class="headerlink" title="五、使用个人域名"></a>五、使用个人域名</h2><p><strong>预知详情，等待下回分解</strong></p>
-</li>
 </ul>
 </li>
 </ul>
+<pre><code>* 配置好以后，我们重新生成hexo s本地预览看一下效果吧，是不是一个酷炫的页面就出来啦，如果要部署的话记得上面的命令顺序哦---[next官网](http://theme-next.iissnan.com/getting-started.html)。  ![Alt text](./8.PNG)
+</code></pre><h2 id="五、使用个人域名"><a href="#五、使用个人域名" class="headerlink" title="五、使用个人域名"></a>五、使用个人域名</h2><p><strong>预知详情，等待下回分解</strong></p>
 <p><a href="http://www.jianshu.com/p/a4b74cc9ff28" target="_blank" rel="external">详情查询</a>……</p>
 
             <div class="clearfix"></div>
