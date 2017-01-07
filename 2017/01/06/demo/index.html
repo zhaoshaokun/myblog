@@ -210,8 +210,52 @@
 <ul>
 <li>node.js <a href="https://nodejs.org/en/" target="_blank" rel="external">下载地址</a> 我下载的版本为v4.4.3</li>
 <li>GIT<a href="https://git-scm.com/" target="_blank" rel="external">下载地址</a>如果你已经安装xcode，那已经默认集成git了，不需要再继续安装</li>
-<li><p>hexo 如果你已经安装好上面两个应用程序，那么现在可以通过<code>npm</code>来安装hexo，这个过程会需要一些时间，请耐心等待<br>  <strong>注意：有些教程没有加下面的sudo，操作是执行不成功的，因为需要管理员权限，因此这里需要在下面的命令中加入sudo</strong></p>
-  <figure class="highlight plain"><figcaption><span>sudo npm install -g hexo-cli```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">* 执行完上面的三个操作，那么现在你的电脑已经安装了node.js,git和hexo了</div><div class="line">## 二、在GitHub上面建立GitHub Pages</div><div class="line">&gt;在不购买服务器的前提下，我们的网站需要挂在GitHub Pages上，其实也可以托管在coding上，但是这个就自己去试验，我们这里以GitHub Pages为例。</div><div class="line">* 首先建立一个[GitHub](https://github.com/)账号，如下图所示</div><div class="line">![Alt text](./1483750658187.png)</div><div class="line">* 然后去注册好的邮箱里面验证一下</div><div class="line">* 验证完成后，需要添加一个仓库Repositories</div><div class="line">![Alt text](./1483750714445.png)</div><div class="line">* 具体的配置信息参考下图</div><div class="line">![Alt text](./1483750750016.png)</div><div class="line">*现在我们在地址栏输入：http://bloggithub.github.io</div><div class="line">会看到下面这样一个界面</div><div class="line">![Alt text](./1483750786394.png)</div><div class="line">* 现在我们已经搭建好个人博客的基础了，下面我们要做的就是真正将窝建立起来。</div><div class="line">* 参考http://www.h5cn.com/html5/jishu/201621813.html</div><div class="line">* 相关具体操作</div><div class="line">	* git分支</div><div class="line">	 * Git branch: 查看分支</div><div class="line">	 * Git branch “分支名称”</div><div class="line">	 * Git checkout v2: 切换分支</div><div class="line">	 * Git push -u origin v2</div><div class="line">	* 托管页面</div><div class="line"> 		http://pages.github.com/（使用教程）</div><div class="line">分支名必须是gh-pages 	</div><div class="line">## 三、使用Hexo来显示博客</div><div class="line">* 使用hexo工具</div><div class="line">	* 使用npm安装hexo</div><div class="line">		* ``npm install -g hexo``</div><div class="line">	* 初始化hexo</div><div class="line">		* ``Hexo init blog``</div><div class="line">	* 生成静态页面</div><div class="line">		* ``hexo generate``</div><div class="line">	* 启动本地服务，进行文章预览调试</div><div class="line">		* ``hexo server``</div><div class="line">	* 修改`_config.yml`文件</div><div class="line">		* ```deploy:</div><div class="line">  					type: git</div><div class="line">  					repository:**********</div><div class="line">  					branch: gh-pages</div></pre></td></tr></table></figure>
+<li>hexo 如果你已经安装好上面两个应用程序，那么现在可以通过<code>npm</code>来安装hexo，这个过程会需要一些时间，请耐心等待<br>  <strong>注意：有些教程没有加下面的sudo，操作是执行不成功的，因为需要管理员权限，因此这里需要在下面的命令中加入sudo</strong><br>  <code>$ sudo npm install -g hexo-cli</code></li>
+<li>执行完上面的三个操作，那么现在你的电脑已经安装了node.js,git和hexo了<h2 id="二、在GitHub上面建立GitHub-Pages"><a href="#二、在GitHub上面建立GitHub-Pages" class="headerlink" title="二、在GitHub上面建立GitHub Pages"></a>二、在GitHub上面建立GitHub Pages</h2><blockquote>
+<p>在不购买服务器的前提下，我们的网站需要挂在GitHub Pages上，其实也可以托管在coding上，但是这个就自己去试验，我们这里以GitHub Pages为例。</p>
+</blockquote>
+</li>
+<li>首先建立一个<a href="https://github.com/" target="_blank" rel="external">GitHub</a>账号，如下图所示<br><img src="./1483750658187.png" alt="Alt text"></li>
+<li>然后去注册好的邮箱里面验证一下</li>
+<li>验证完成后，需要添加一个仓库Repositories<br><img src="./1483750714445.png" alt="Alt text"></li>
+<li>具体的配置信息参考下图<br><img src="./1483750750016.png" alt="Alt text"><br>*现在我们在地址栏输入：<a href="http://bloggithub.github.io" target="_blank" rel="external">http://bloggithub.github.io</a><br>会看到下面这样一个界面<br><img src="./1483750786394.png" alt="Alt text"></li>
+<li>现在我们已经搭建好个人博客的基础了，下面我们要做的就是真正将窝建立起来。</li>
+<li>参考<a href="http://www.h5cn.com/html5/jishu/201621813.html" target="_blank" rel="external">http://www.h5cn.com/html5/jishu/201621813.html</a></li>
+<li>相关具体操作<ul>
+<li>git分支<ul>
+<li>Git branch: 查看分支</li>
+<li>Git branch “分支名称”</li>
+<li>Git checkout v2: 切换分支</li>
+<li>Git push -u origin v2</li>
+</ul>
+</li>
+<li>托管页面<br>   <a href="http://pages.github.com/（使用教程）" target="_blank" rel="external">http://pages.github.com/（使用教程）</a><br>分支名必须是gh-pages     <h2 id="三、使用Hexo来显示博客"><a href="#三、使用Hexo来显示博客" class="headerlink" title="三、使用Hexo来显示博客"></a>三、使用Hexo来显示博客</h2></li>
+</ul>
+</li>
+<li><p>使用hexo工具</p>
+<ul>
+<li>使用npm安装hexo<ul>
+<li><code>npm install -g hexo</code></li>
+</ul>
+</li>
+<li>初始化hexo<ul>
+<li><code>Hexo init blog</code></li>
+</ul>
+</li>
+<li>生成静态页面<ul>
+<li><code>hexo generate</code></li>
+</ul>
+</li>
+<li>启动本地服务，进行文章预览调试<ul>
+<li><code>hexo server</code></li>
+</ul>
+</li>
+<li>修改<code>_config.yml</code>文件<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">type: git</div><div class="line">repository:**********</div><div class="line">branch: gh-pages</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
 <ul>
 <li>下载安装<code>hexo-deployer-git</code><ul>
 <li><code>npm install hexo-deployer-git --save</code><ul>
