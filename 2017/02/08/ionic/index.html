@@ -228,7 +228,7 @@
 <li>在百度上搜索“java jdk下载”并安装<br><img src="/img/ionic/图片1.png" alt="img"></li>
 <li>成功安装之后，进行测试是否真的成功安装，点击【开始】—-【运行】—-输入 CMD，在命令提示符里面输入“Java -version”并按回车键，出现下图，即为安装成功。<br><img src="/img/ionic/图片2.png" alt="img"></li>
 <li>下面开始配置环境变量，右击【我的电脑】—【属性】—–【高级】—【环境变量】</li>
-<li>选择【新建系统变量】–弹出“编辑用户变量”对话框，在“变量名”文本框输入“JAVA_HOME”,在“变量值”文本框输入JDK的安装路径：<br><img src="/img/ionic/图片3.png" alt="img"><br><img src="/img/ionic/图片4.png" alt="img"><ul>
+<li>选择【新建系统变量】–弹出“编辑用户变量”对话框，在“变量名”文本框输入“JAVA_HOME”,在“变量值”文本框输入JDK的安装路径：<br><img src="/img/ionic/图片3.PNG" alt="img"><br><img src="/img/ionic/图片4.png" alt="img"><ul>
 <li>在“系统变量”选项区域中查看PATH变量，如果不存在，则新建变量 PATH，否则选中该变量，单击“编辑”按钮，在“变量值”文本框的起始位置添加“%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;”或者是直接“%JAVA_HOME%\bin;”，单击确定按钮，如图：<br><img src="/img/ionic/图片5.png" alt="img"></li>
 <li>在“系统变量”选项区域中查看CLASSPATH 变量，如果不存在，则新建变量CLASSPATH，否则选中该变量，单击“编辑”按钮，在“变量值”文本框的起始位置添加“.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;”。如图：<br><img src="/img/ionic/图片6.png" alt="img"></li>
 <li>现在测试环境变量的配置成功与否。在DOS命令行窗口输入“JAVA”，输出帮助信息即为配置正确。如图：<br><img src="/img/ionic/图片7.png" alt="img"></li>
@@ -254,7 +254,7 @@
 </ul>
 <p>PATH变量的配置：<br>          变量名：PATH<br>          变量值：%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;（win7是直接这样          写）<br><img src="/img/ionic/图片13.png" alt="img"></p>
 <h3 id="3-App工程的创建、启动和应用"><a href="#3-App工程的创建、启动和应用" class="headerlink" title="3.App工程的创建、启动和应用"></a>3.App工程的创建、启动和应用</h3><ul>
-<li>1.新建一个文件夹，再在文件夹下创建工程myprj，如下图：<br><img src="/img/ionic/图片14.png" alt="img"></li>
+<li>1.新建一个文件夹，再在文件夹下创建工程myprj，如下图：<br><img src="/img/ionic/图片14.PNG" alt="img"></li>
 <li>在此目录下打开命令提示框，输入命令：<br><code>ionic start myapp tabs</code>     //使用这个命令创建一个App工程</li>
 <li>3.进入myprj,开始如下操作：<br><code>cd myprj</code><br><code>ionic serve</code>//使用这个命令启动应用，会自动在浏览器中打开应用<br><code>ionic platfrom add android</code>//为工程添加平台编译选项<br><code>ionic build android</code>//编译</li>
 </ul>
